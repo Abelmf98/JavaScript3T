@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaracion de variables</title>
+</head>
+<body>
+    <h1>Declaración de variables</h1>
+    <p>Declaramos las variables en JavaScript con: var, let o const.</p>
+    <code><pre>
+        var num1
+        let num2
+        const NUM3
+    </pre>
+    </code>
+
+    <h2>Diferencias</h2>
+    <p><em>var</em>declara las variables a nivel "funcional".
+        Es decir, el ámbito de la variable es toda la función en la que se declara y sus bloques internos.</p>
+    <p>Si estamos al máximo nivel, la variables es global</p>
+    <p>Usando var, la declaración va al principio de la función.</p>
+
+    <p><em>let</em>declara las variables a nivel "de bloque".
+        Es decir, el ámbito de la variable es todo el bloque en el que se declara y sus bloques internos.</p>
+    <p>Si estamos al máximo nivel, la variables no entra en la función</p>
+
+    <p><em>const</em>declara las variables a nivel "funcional". Es decir, igual que var</p>
+    <p>Pero no se puede "reasignar".</p>
+   
+
+    <script>
+        'use strict' //obligo a declarar variables
+        console.log('num1 al principio existe, pero vale' + num1)
+        
+        var num1;
+        num1 = 7
+        f1()
+        let num2 = 42
+
+        function f1(){
+            console.log('num1 existe (es global) y vale ' + num1)
+            if(true){ //Creamos un bloque
+                let num2 = 45 //num2 es otra variable
+                console.log('num2 es otra variable (es local, de bloque) y vale ') + num2
+            }
+        }
+
+        function f2(){
+            var num1 = 67
+            console.log('num1 existe (es funcional) y vale' + num1)
+        }
+
+        const NUM3 = 56
+        console.log('NUM3 vale' + NUM3)
+        /* NUM3 = 57 */
+
+    </script>
+    <p><em>Moraleja:</em> Si puedes utiliza const. Si no, usa let salvo que necesites una variable global (usas var).</p>
+    
+</body>
+</html>

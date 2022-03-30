@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1>Ejercicio de funciones</h1>
+
+    <h2>Ejercicio 1</h2>
+    <p>Elaborar una función a la cual le enviemos tres enteros y devuelva el menor.</p>
+    <script>
+        
+        function encontrarNumero(valor1,valor2,valor3){   
+            if(valor1<valor2 && valor1<valor3){
+                return valor1 
+            }
+            if(valor2<valor1 && valor2<valor3){
+                return valor2 
+            }
+            if(valor3<valor2 && valor3<valor1){
+                return valor3 
+            }
+        }
+
+        let resultado = encontrarNumero(42 , 3, 56)
+        console.log(resultado + '= 3')
+        resultado = encontrarNumero(1 , 2, 3)
+        console.log(resultado + '= 1')
+        resultado = encontrarNumero(-3 , -5, 1)
+        console.log(resultado + '= -5')
+        resultado = encontrarNumero(-3 , -5, -9)
+        console.log(resultado + '= -9')
+
+    </script>
+
+    <h2>Ejercicio 2</h2>
+    <p>Elaborar una función a la cual le envíe el valor del lado de un cuadrado y me retorne su perímetro.</p>
+
+    <script>
+        function devolverPerimetro(lado){
+            return lado + lado + lado +lado
+        }
+
+        resultado = devolverPerimetro(4)
+        console.log(resultado + '=16')
+
+    </script>
+</body>
+</html>

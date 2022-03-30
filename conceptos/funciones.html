@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>Funciones</h1>
+    <p><em>Declaramos</em> las variables en JavaScript con la palabra reservada function.</p>
+    <p>Las funciones tienen:</p>
+
+    <ol>
+        <li>Nombre.</li>
+        <li>Parámetros.</li>
+        <li>Resultado.</li>
+        <li>Cuerpo.</li>
+    </ol>
+
+    <code><pre>
+        function nombre(parametro1, parametro2){
+            //cuerpo con el código de la función.
+            return resultado
+        }
+    </pre></code>
+    <p><em>Llamamos</em> a las funciones por su nombre y dándole los parametros.
+        No olvidamos "recoger" el resultado.</p>
+
+    <p><a href="ejercicios/funciones.html">Ejercios de Funciones</a></p>
+
+    <h2>Estrategia para programar Funciones</h2>
+    <ol>
+        <li>Hacemos la DECLARACIÓN:
+            <ol>
+                <li>Elegir el nombre de la función.</li>
+                <li>Elegir el nombre de los parámetros.</li>
+                <li>Identificando el tipo de dato del resultado.</li>
+            </ol>
+        </li>
+        <li>PROBAMOS la función
+            <ul>
+                <li>Devolvemos un resultado "mock" (42).</li>
+                <li>Llamamos a la función sin parámetros y comprobamos que obtenemos el resultado mock.</li>
+            </ul>
+        </li>    
+        <li>BUSCAMOS TESTS (ejemplos).</li>
+        <li>PROGRAMAMOS el cuerpo de la función hasta que pasen los test.</li>
+        <li>Si el problema es complicado, lo "simplifico".</li>
+    </ol>
+</body>
+</html>
