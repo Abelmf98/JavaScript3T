@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3</title>
+    <title>Ejercicios</title>
 </head>
 <body>
     <h1>Ejercicio de funciones</h1>
 
     <h2>Ejercicio 1</h2>
+    <p>Programar una función que reciba tres números y devuelva su suma.</p>
+    <script>
+        function devolverSuma(numero1, numero2, numero3){
+            return numero1 + numero2 + numero3
+        }
+
+        let resultado = devolverSuma(42, 3, 56)
+        console.log(resultado + '=101 => Ej1')
+    </script>
+
+    <h2>Ejercicio 2</h2>
     <p>Elaborar una función a la cual le enviemos tres enteros y devuelva el menor.</p>
     <script>
         
@@ -25,28 +36,160 @@
             }
         }
 
-        let resultado = encontrarNumero(42 , 3, 56)
-        console.log(resultado + '= 3')
+        resultado = encontrarNumero(42 , 3, 56)
+        console.log(resultado + '= 3 => Ej2')
         resultado = encontrarNumero(1 , 2, 3)
-        console.log(resultado + '= 1')
+        console.log(resultado + '= 1 => Ej2')
         resultado = encontrarNumero(-3 , -5, 1)
-        console.log(resultado + '= -5')
+        console.log(resultado + '= -5 => Ej2')
         resultado = encontrarNumero(-3 , -5, -9)
-        console.log(resultado + '= -9')
+        console.log(resultado + '= -9 => Ej2')
 
     </script>
 
-    <h2>Ejercicio 2</h2>
+    <h2>Ejercicio 3</h2>
     <p>Elaborar una función a la cual le envíe el valor del lado de un cuadrado y me retorne su perímetro.</p>
 
     <script>
         function devolverPerimetro(lado){
-            return lado + lado + lado +lado
+            return lado *4
         }
 
         resultado = devolverPerimetro(4)
-        console.log(resultado + '=16')
+        console.log(resultado + '= 16 => Ej3')
 
+    </script>
+
+    <h2>Ejercicio 4</h2>
+    <p>Programar una función que reciba número y devuelva su número de dígitos.</p>
+    <script>
+        function devolverDigitos(numero){
+            return numero.toString().length
+        }
+
+        resultado = devolverDigitos(5)
+        console.log(resultado + ' - 5 es un digito => Ej4')
+        resultado = devolverDigitos(10)
+        console.log(resultado + ' - 10 son 2 digitos => Ej4')
+        resultado = devolverDigitos(100)
+        console.log(resultado + ' - 100 son 3 digitos => Ej4')
+        resultado = devolverDigitos(1000)
+        console.log(resultado + ' - 1000 son 4 digitos => Ej4')
+        resultado = devolverDigitos(10000)
+        console.log(resultado + ' - 100000 son 5 digitos => Ej4')
+    </script>
+
+    <h2>Ejercicio 5</h2>
+    <p>Programar una función que reciba tres números y devuelva su promedio.</p>
+    <script>
+        function devolverPromedio(numero1, numero2, numero3){
+            return (numero1 + numero2 + numero3)/2
+        }
+
+        resultado = devolverPromedio(10, 3, 1)
+        console.log(resultado + ' - 14/2 = 7 => Ej5')
+
+        resultado =devolverPromedio(5, 10, 5)
+        console.log(resultado + ' - 20/2 = 10 => Ej5')
+
+    </script>
+
+    <h2>Ejercicio 6</h2>
+    <p>Programar una función que reciba dos números y nos indique si el primero es múltiplo del segundo.</p>
+    <script>
+        function devolverMultiplo(numero1, numero2){
+            if((numero1 % numero2)== 0){
+                return true
+            }else
+            {
+                return false
+            }
+        }
+
+        resultado = devolverMultiplo(5, 2)
+        console.log(resultado + ' No son multiplos => Ej6')
+        
+        resultado = devolverMultiplo(10,5)
+        console.log(resultado + ' Son multiplos => Ej6')
+
+        resultado = devolverMultiplo(49, 7)
+        console.log(resultado + ' Son multiplos => Ej6')
+
+    </script>
+
+    <h2>Ejercicio 7</h2>
+
+    <p>Programar una función que reciba el nombre y muestre por consola un saludo educado.</p>
+    <script>
+        function devolverSaludo(saludo){
+            return "Hola, muy buenas tardes"
+        }
+
+        resultado = devolverSaludo()
+        console.log(resultado + ' => Ej7')
+    </script>
+
+    <h2>Ejercicio 8</h2>
+    <p>Programar una función que reciba un número y muestre por consola la tabla de multiplicar de ese número.</p>
+    <script>
+
+        function mostrarTabla(numero){
+ 
+            for (var i = 1; i <= 10; i++) {
+                resultado = numero * i;
+                console.log( numero +"x"+ i +"="+ resultado);
+            }
+        }
+        resultado = mostrarTabla(5)
+        console.log(' => Ej8')
+
+        resultado = mostrarTabla(10)
+        console.log(' => Ej8')
+
+        resultado = mostrarTabla(2)
+        console.log(' => Ej8')
+    </script>
+
+    <h2>Ejercicio 9</h2>
+    <p>Programar una función que reciba un número y devuelva un texto conla tabla de multiplicar de ese número.</p>
+    <script>
+        function devolverTexto(numero){
+            for (var i = 1; i <= 10; i++) {
+                resultado = numero * i
+                document.write( numero +"x"+ i +"="+ resultado + '<br>')
+            }
+        }
+
+        resultado = devolverTexto(3)
+
+    </script>
+
+    <h2>Ejercicio 10</h2>
+    <p>Programar una función que reciba un número y un caracter muestre una flecha hacia la derecha
+    formada con el carácter recibido y con tantas filas como el doble del número más uno.</p>
+    <script>
+        function generarFilas(numero){
+        for(var i=1;i<=numero;i++)
+		{
+			for(var z=1; z<=i;z++)
+			{			
+				document.write(">")
+			
+			}
+            document.write("\n")
+		}
+		for(var t=numero; t>=1;t--)
+		{
+			for(var s=t;s>=1; s--)
+			{
+				document.write(">")
+			}
+            document.write("\n")	
+		}
+    }
+        resultado = generarFilas(3)
+		
+		
     </script>
 </body>
 </html>
