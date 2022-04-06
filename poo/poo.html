@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+</head>
+<body>
+    
+    <h1>Programación orientada a objetos</h1>
+
+    <h3><a href="ejerciciospoo/ejercicio1.html">Ejercicios POO</a></h3>
+
+    <h2>Conceptos de POO</h2>
+    <h2><dfn>Clases</dfn></h2>
+    <h2>Objeto</h2>
+    <h2>Atributo</h2>
+    <h2>Método</h2>
+
+    <h2>Como se hace</h2>
+    <p>Como se hace una clase:</p>
+    <pre>
+        class NombreClase{}
+    </pre>
+
+    <script>
+        class Poligono{}
+    </script>
+
+    <h2>Como se hace</h2>
+    <p>Como se hace un objeto:</p>
+    <pre>
+        var figura = new Poligono()
+    </pre>
+
+    <script>
+         let cuadradoVerde = new Poligono()
+    </script>
+
+    <h2>Como se hace</h2>
+    <p>Como se hace un atributo: </p>
+    <pre>
+        objeto.atributo = valor_atributo
+    </pre>
+
+    
+    <script>
+       cuadradoVerde.lado = 42 //Creamos el atributo "lado" en el objeto cuadradoVerde
+    </script>
+
+    <h2>Como se hace</h2>
+    <p>Como se hace un método:</p>
+    <pre>
+        objeto.metodo = function()(...)
+    </pre>
+    <script>
+        cuadradoVerde.getArea = function(){ return this.lado * this.lado}
+        console.log(cuadradoVerde.getArea())
+    </script>
+
+    <p><dfn>this</dfn>es la pababra reservada que hace referencia al objeto que ejecuta el código.</p>
+
+    <h2>Relaciones entre Clases</h2>
+
+    <h3>Uso</h3>
+    <p>Una clase usa <em>"usa"</em> a otra clase cuando alguno de sus atributos o algunos de los parámetros o resultados
+    de sus métodos son objetos de otra clase.</p>
+
+    <p>Ejemplo:</p>
+    <pre>
+        class Persona{}
+
+        class Factura{
+            setCliente(cliente){ //Si cliente es un objeto de tipo Persona, entonces la clase Factura "usa" a Persona.
+                this.cliente = cliente 
+            }
+        }
+    </pre>
+
+
+    <h3>Herencias</h3>
+    <p></p>
+</body>
+</html>

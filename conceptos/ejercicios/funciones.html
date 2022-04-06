@@ -154,13 +154,17 @@
     <p>Programar una función que reciba un número y devuelva un texto conla tabla de multiplicar de ese número.</p>
     <script>
         function devolverTexto(numero){
+
+            let tabla = ""
+
             for (var i = 1; i <= 10; i++) {
-                resultado = numero * i
-                document.write( numero +"x"+ i +"="+ resultado + '<br>')
+                tabla = tabla + "" + numero + " x " + i + " = " +(numero*i) +"\n"
             }
+            return tabla
         }
 
-        resultado = devolverTexto(3)
+        let tabla7 = devolverTexto(7)
+        console.log(tabla7)
 
     </script>
 
