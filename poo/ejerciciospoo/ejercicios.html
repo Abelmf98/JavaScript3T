@@ -148,8 +148,8 @@
         'use strict'
 
         class Cuadrado extends Poligono{
-            constructor(lado, numLados) {
-                super();
+            constructor(lado) {
+                super('cuadrado', lado, 4);
                 this.lado = lado
                 this.numLados = numLados
             }
@@ -159,13 +159,13 @@
             }
         }
 
-        var poligono1 = new Cuadrado(20,4)
+        var poligono1 = new Cuadrado(20)
         console.log("El área del cuadrado es: " + poligono1.getArea())
 
         class Triangulo extends Poligono{
             
             constructor(base, altura){
-                super();
+                super('triangulo', base, 3);
                 this.base = base
                 this.altura = altura
             }

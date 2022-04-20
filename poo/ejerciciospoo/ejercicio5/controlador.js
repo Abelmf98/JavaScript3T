@@ -1,12 +1,17 @@
-import 'vista.js'
+console.log('Estoy aqui')
+import {Vista} from './vista.js'
+import {Modelo} from './modelo.js'
 
-'use strict'
 
 
 class Controlador{
-    constructor(vista=Vista, modelo=Modelo){
-        this.vista = vista
-        this.modelo = modelo
+    constructor(){
+        console.log('ADIOS')
+        this.vista = new Vista()
+        this.modelo = new Modelo()
+        let cogerdato = this.modelo.getDatos()
+        console.log(cogerdato)
+        this.vista.mostrar(cogerdato)
     }
 }
 

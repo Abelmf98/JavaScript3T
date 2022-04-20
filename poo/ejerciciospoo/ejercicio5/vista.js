@@ -1,8 +1,12 @@
-'use strict'
 
-class Vista{
-    mostrar(){
-        console.log('El sentido del universo es...')
-        return 0
+export class Vista{
+    constructor(){
+        console.log('TRON..')
     }
+    mostrar(dato){
+        let texto = document.getElementById('texto')
+        texto.textContent = 'El sentido del universo es..' + dato
+    }
+
+    
 }

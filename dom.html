@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>{Document Object Model}</h1>
+    <h2>Conceptos</h2>
+    <p><dfn>DOM</dfn></p>
+
+    <h2>¿Qué necesitamos hacer?</h2>
+
+    <p>Encontrar los elementos del DOM</p>
+    <pre>
+        //Por identificador
+        let div1 = document.getElementById('div1')
+
+        //Por su nombre de marca
+        let div1 = document.getElementByTagName('div')[7]
+
+        //Por selector de CSS
+        let div1 = document.querySelector('body > div[width = 7]')
+    </pre>
+    <script>
+        let pDOM = document.getElementByTagName('p')[1]
+    </script>
+
+    <p>Modificar elementos del DOM</p>
+    <pre>
+        pDom.style.color = 'green'
+    </pre>
+    <script>
+        pDom.style.color = 'green'
+    </script>
+
+    <h2>Creación dinámica</h2>
+</body>
+</html>
