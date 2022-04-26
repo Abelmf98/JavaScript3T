@@ -97,7 +97,30 @@
 
 
     <h3>Herencias</h3>
-    <p>Las herencias nos permite asociar un objeto prototipo con un método constructor. Así, el objeto hereda las propiedades del objeto.</p>
-    <p></p>
+    <p>
+        Las herencias nos permite asociar un objeto prototipo con un método constructor.
+         Así, el objeto hereda las propiedades del objeto.
+    </p>
+
+    <h3>Super</h3>
+    <p>
+        Es un uso especial de la palabra clave super donde se llama un constructor principal.<br>
+        En general, la palabra clave super se puede utilizar para llamar a métodos.
+    </p>
+    <p>Ejemplo</p>
+    <pre>
+        class Persona{
+            constructor(nombre){
+                this.nombre = nombre
+            }
+        }
+
+        class Factura extends Persona{
+            constructor(){
+                super() //Llama al constructor de la clase persona
+            }
+        }
+    </pre>
+    
 </body>
 </html>
